@@ -1,0 +1,60 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "React boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; react-scripts build'",
+    "build:dev": "REACT_APP_ENV=development npm run build",
+    "build:production": "REACT_APP_ENV=development npm run build",
+    "lint": "eslint src/**/*.js",
+    "lint-staged": "lint-staged --config lint-stagedrc.json",
+    "husky-install": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.epam.com/aishwarya_sonawane/react-webpack-task-2.git"
+  },
+  "author": "Aishwarya",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "babel-loader": "^9.0.0",
+    "eslint": "^8.26.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.31.10",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
